@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-project
+  labels:
+    app: simple-project
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-project
+  template:
+    metadata:
+      labels:
+        app: simple-project
+    spec:
+      containers:
+      - name: simple-project
+        image: viswapriya0000/simple-project
+        ports:
+        - containerPort: 5678

@@ -1,5 +1,5 @@
 FROM openjdk:latest
 LABEL maintainer="javaguides.net"
-ADD ./build/libs/simpleproject-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar
+ADD ./build/libs/simpleproject-0.0.1-SNAPSHOT.jar simple-project.jar
 #EXPOSE 5678
-ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
+ENTRYPOINT ["java", "-jar", "simple-project.jar"]
